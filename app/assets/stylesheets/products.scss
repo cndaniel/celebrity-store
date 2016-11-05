@@ -1,6 +1,6 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: //sass-lang.com/
 
 
 
@@ -83,12 +83,19 @@
 
   .card:nth-child(4n+1) {
     margin-left: -3px;
-    margin-right: 1px;
+    margin-right: 2px;
   }
 
-  .card:nth-child(4n+2),
-  .card:nth-child(4n+3) {
+  .card:nth-child(4n+2),{
     margin-right: 1px;
+  }
+  .card:nth-child(4n+3) {
+    margin-left: 1px;
+  }
+
+  .card:nth-child(4n+4) {
+    margin-left: 2px;
+    margin-right: -3px;
   }
 /* card fronts and backs */
 .card__front,

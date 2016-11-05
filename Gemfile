@@ -42,7 +42,7 @@ gem 'pry'
 gem 'aasm'
 gem "figaro"
 gem 'mailgun-ruby', '~>1.1.1'
-gem "fog"
+gem "fog-aws"
 gem 'owlcarousel-rails'
 
 group :development, :test do

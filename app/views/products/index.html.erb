@@ -15,7 +15,7 @@
               <% if product.photos.present? %>
                 <%= link_to image_tag(product.photos[0].url(:thumb), style:"width:100%"),product_path(product) %>
               <% else %>
-                <%= image_tag "http://placehold.it/200x200", style:"width:100%;" %>
+                <%= image_tag "//placehold.it/200x200", style:"width:100%;" %>
                 <% end %>
              </div>
             </div>
@@ -26,11 +26,11 @@
 
         <div class="section__content clearfix">
           <div class="row">
-          	<div class="col-md-6" style= "padding-right:1px;">
-          		   <%= image_tag("http://placehold.it/623x312.5",class:"promo_image")%>
+          	<div class="col-md-6" style= "padding-right:1px; padding-left:12px;">
+          		   <%= image_tag("//placehold.it/623x312.5",class:"promo_image")%>
           	    </div>
-          	    	<div class="col-md-6" style= "padding-left:1px;">
-                     <%=  image_tag("http://placehold.it/623x312.5",class:"promo_image")%>
+          	    	<div class="col-md-6" style= "padding-left:1px;padding-right:12px;">
+                     <%=  image_tag("//placehold.it/623x312.5",class:"promo_image")%>
                    </div>
 
         </div><!-- /card -->

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'orders/show'
 
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see //guides.rubyonrails.org/routing.html
   root 'products#index'
 
   # get 网址 , to controller#action

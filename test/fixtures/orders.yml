@@ -13,7 +13,7 @@
 #  paid_by             :string
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at //api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   name: MyString
