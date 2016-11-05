@@ -1,7 +1,7 @@
 <div class="section">
 
 
-        <div class="section__content clearfix">
+
 
         <% @products.each do |product|%>
 
@@ -12,29 +12,26 @@
             </div>
 
             <div class="card__back">
-
-                <h3 class="card_title"><%= product.title %></h3>
-
-                  <div class="card__text">
-               <%= link_to product.description, product_path(product), style:"text-decoration: none" %>
+              <% if product.photos.present? %>
+                <%= link_to image_tag(product.photos[0].url(:thumb), style:"width:100%"),product_path(product) %>
+              <% else %>
+                <%= image_tag "http://placehold.it/200x200", style:"width:100%;" %>
+                <% end %>
              </div>
             </div>
-          </div>
+
 
         <% end %>
         </div><!-- /card -->
 
-
-
-
-
         <div class="section__content clearfix">
           <div class="row">
           	<div class="col-md-6">
-          		   <%= image_tag("http://placehold.it/640x312.5",class:"promo_image")%>
+          		   <%= image_tag("http://placehold.it/600x312.5",class:"promo_image")%>
           	    </div>
           	    	<div class="col-md-6">
-                     <%=  image_tag("http://placehold.it/640x312.5",class:"promo_image")%>
+                     <%=  image_tag("http://placehold.it/600x312.5",class:"promo_image")%>
                    </div>
 
         </div><!-- /card -->
+      </div>

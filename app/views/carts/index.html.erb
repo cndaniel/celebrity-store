@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<table class="table">
+	<table class="table table-inverse">
 		<thead>
 			<tr class="text-left success">
 				<td class="col-md-4">商品</td>
@@ -20,10 +20,10 @@
 			<% @cart_items.each do |cart_item| %>
 			<tr class="warning">
 				<td>
-					<div class="col-md-8">
+					<div class="col-md-9">
 
 						<% if cart_item.product.photos.present? %>
-							<%= link_to image_tag(cart_item.product.photos[0]), product_path(cart_item.product) %>
+							<%= link_to image_tag(cart_item.product.photos[0].url(:thumb)), product_path(cart_item.product) %>
 
 						<% else %>
 							<%= link_to image_tag($DEFAULT_THUMB_IMAGE), product_path(cart_item.product) %>
@@ -31,7 +31,7 @@
 						<% end %>
 					</div>
 
-					<div class="col-md-2">
+					<div class="col-md-3">
 						<p><%= cart_item.product.title %></p>
 					</div>
 

@@ -9,16 +9,23 @@
 		<div class="col-md-4">
 			<br>
 			<% if @product.photos.present? %>
-						 <%= image_tag(@product.photos[0].thumb.url, class:"thumbnail") %>
+			<% @product.photos.each_with_index do |p, index| %>
+				<% if index == 0 %>
+					<%= image_tag p.medium.url %>
+					<div style="letter-spacing: -4px">
+				<% else %>
+					<%= image_tag p.xsthumb.url %>
+				<% end %>
+			<% end %>
+			</div>
+		<% else %>
+				<%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
 
-					<% else %>
-							<%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-
-					<% end %>
+		<% end %>
 		</div>
 
 		<!-- title, description and add to cart -->
-		<div class="col-md-5">
+		<div class="col-md-4 col-md-offset-1">
 			<h3><%= simple_format(@product.title) %></h3>
 			<br>
 			<h4>本月剩余预约次数</h4><%= @product.quantity %>
@@ -41,7 +48,7 @@
 								<%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
 
 						<% end %>
-				<br>
+
 				<%= link_to other_product.title, product_path(other_product), class: "pull-right" %>
 				<br><br>
 			</div>

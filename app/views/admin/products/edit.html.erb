@@ -3,7 +3,13 @@
 	<div class="col-md-4" style="padding-left: 0px">
 		<br>
 
-		<%= render partial: "common/product_image", locals: {product: @product, size: "medium", admin: true} %>
+		<% if @product.photos.present? %>
+						<%= image_tag(@product.photos[0].medium.url) %>
+
+				 <% else %>
+						 <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+
+				 <% end %>
 
 	</div>
 	<div class="col-md-4 col-md-offset-1">

@@ -17,21 +17,28 @@
 
 
 		<div class="row">
-			<div class="col-md-1 sidebar"  id="sidebar-wrapper">
-				<ul class="nav nav-sidebar" id="sidebar">
-					<li class="active">
-						<%= link_to("产品管理", admin_products_path) %>
-					</li>
+
+			<div class="col-md-1" id="sidebar-wrapper">
+
+				<ul class="sidebar-nav">
+					<%= link_to admin_products_path do %>
 					<li>
-						<%= link_to "订单管理", admin_orders_path %>
+						<i class="fa fa-info-circle" aria-hidden="true"></i> 产品管理
 					</li>
+					<% end %>
+					<li>
+						<%= link_to admin_orders_path do %>
+					 <i class="fa fa-check-square-o" aria-hidden="true"></i> 订单管理
+					</li>
+					<% end %>
 				</ul>
 			</div>
 
-			<div class="col-md-11">
+
+			<div class="col-md-11 col-md-offset-1 ">
 				<%= yield %>
 			</div>
-
+		</div>
 		</div>
 
 
