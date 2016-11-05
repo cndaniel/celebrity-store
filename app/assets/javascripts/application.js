@@ -18,19 +18,20 @@
 //= require owl.carousel
 //= require_tree .
 
-<script>
+
 $("#menu-toggle").click(function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
 });
-</script>
 
 
 
 
 
-$(document).ready(function() {
 
+$(document).on('turbolinks:load', initBanner);
+
+function initBanner() {
   $("#owl-demo").owlCarousel({
 
       navigation : true, // Show next and prev buttons
@@ -45,7 +46,7 @@ $(document).ready(function() {
       // itemsTablet: false,
       // itemsMobile : false
   });
-});
+}
 
 
 /* Modernizr 2.8.1 (Custom Build) | MIT & BSD

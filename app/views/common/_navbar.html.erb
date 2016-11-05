@@ -18,7 +18,7 @@
           <form id="custom-search-form" class="form-search form-horizontal pull-left">
 
           <%= form_tag products_path, method: :get, class: "navbar-form navbar-left" do %>
-                    <%= text_field_tag :search, params[:search] ,class:"search-query mac-style", placeholder:"站内搜索" %>
+                    <%= text_field_tag :search, params[:search] ,class:"search-query mac-style form-control", placeholder:"站内搜索" %>
 
                     <%= button_tag(type:"submit", class: "btn") do %>
                     <i class="fa fa-search"></i>
@@ -57,7 +57,7 @@
                                 </li>
                             <% else %>
                                 <li><%= link_to users_delivery_addresses_path do %>
-                                  <i class="fa fa-address-book" aria-hidden="true"></i> 个人资料管理 
+                                  <i class="fa fa-address-book" aria-hidden="true"></i> 个人资料管理
                                 </li>
                                 <% end %>
 

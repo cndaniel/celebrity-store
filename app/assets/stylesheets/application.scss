@@ -30,8 +30,9 @@
 
 
 
-
-
+.footer {
+  padding-top: 30px;
+}
 
 #wrapper.toggled {
     padding-left: 250px;
@@ -39,7 +40,6 @@
 
 #sidebar-wrapper {
     z-index: 1000;
-    position: fixed;
     left: 240px;
     width: 0;
     height: 100%;
@@ -50,6 +50,7 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    border-radius: 5px;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -126,7 +127,7 @@
 
     #sidebar-wrapper {
         width: 99px;
-        height: 88px;
+        height: 200px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -179,6 +180,11 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
   }
+}
+
+
+.search-query{
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, width, ease-int-out 3.15s;
 }
 
 .search-query:focus {

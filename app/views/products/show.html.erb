@@ -14,7 +14,9 @@
 					<%= image_tag p.medium.url %>
 					<div style="letter-spacing: -4px">
 				<% else %>
+				<div class="col-md-6">
 					<%= image_tag p.xsthumb.url %>
+				</div>
 				<% end %>
 			<% end %>
 			</div>
@@ -37,7 +39,7 @@
 
 		<!-- other recommendation -->
 		<div class="col-md-3">
-			<h4>其他推荐</h4>
+			<h4 class="text-center">其他推荐</h4>
 			<br>
 			<% @other_products.each do |other_product| %>
 			<div class="col-md-12">
