@@ -7,13 +7,13 @@ CarrierWave.configure do |config|
     config.storage :fog
     config.fog_credentials = {
       provider:              'AWS',
-      aws_access_key_id:     ENV["S3_key_id"],      # 你的 key
+      aws_access_key_id:     ENV["AWS_ACCESS_KEY_ID"],      # 你的 key
 
 
-      aws_secret_access_key: ENV["aws_secret_access_key"],      # 你的 secret key
+      aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],      # 你的 secret key
 
 
-      region:                'eu-central-1' # 你的 S3 bucket 的 Region 位置
+      region:                'us-east-1' # 你的 S3 bucket 的 Region 位置
 
 
     }
