@@ -60,7 +60,7 @@ class OrdersController < ApplicationController
       @order.save
 
       ## Add Mailer
-      OrderMailer.order_email(current_user, @order).deliver
+      # OrderMailer.order_email(current_user, @order).deliver
 
 
       redirect_to order_path(@order.token)
