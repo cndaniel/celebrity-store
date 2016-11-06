@@ -14,8 +14,8 @@
 					<%= image_tag p.medium.url %>
 					<div style="letter-spacing: -4px">
 				<% else %>
-				<div class="col-md-6">
-					<%= image_tag p.xsthumb.url %>
+				<div class="col-md-12">
+					<%= image_tag prothumb.url %>
 				</div>
 				<% end %>
 			<% end %>
@@ -30,8 +30,9 @@
 		<div class="col-md-4 col-md-offset-1">
 			<h3><%= simple_format(@product.title) %></h3>
 			<br>
-			<h4>剩余次数</h4><%= @product.quantity %>
-			<br><p><%= simple_format(@product.description) %></p>
+			<h4>还剩（次/件）</h4><%= @product.quantity %>
+			<h4>简介</h4>
+			<p><%= simple_format(@product.description) %></p>
 			<br>
 			<h4 class="text-left">价格: <span style="color: green"><%= @product.price %> 元 </span></h4>
 			<%= render "common/add_to_cart_button" %>
@@ -40,19 +41,19 @@
 		<!-- other recommendation -->
 		<div class="col-md-3">
 			<h4 class="text-center">其他推荐</h4>
-			<br>
+
 			<% @other_products.each do |other_product| %>
-			<div class="col-md-12">
+			<div class="text-center" style="margin-bottom:10px">
 				<% if other_product.photos.present? %>
-							 <%= image_tag(other_product.photos[0].thumb.url, class:"thumbnail") %>
+							 <%= image_tag(other_product.photos[0].xsthumb.url, class:"thumbnail",style:"margin:0 auto; margin-bottom:6px;") %>
 
 						<% else %>
-								<%= image_tag("//placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+								<%= image_tag("//placehold.it/170x170&text=No Pic", class: "thumbnail", style:"margin:0 auto; margin-bottom:6px;") %>
 
 						<% end %>
 
-				<%= link_to other_product.title, product_path(other_product), class: "pull-right" %>
-				<br><br>
+				<%= link_to other_product.title, product_path(other_product), class: "pull-center",style:"margin-left:10px;" %>
+
 			</div>
 			<% end %>
 		</div>
@@ -68,10 +69,13 @@
 <% when 3 %>
 	<%= render partial: "product_cognitive_learning_detail" %>
 <% when 5 %>
-	<%= render partial: "product_agile_detail" %>	
+	<%= render partial: "product_agile_detail" %>
 <% when 6 %>
 	<%= render partial: "product_coffee_detail" %>
-
+<% when 7 %>
+	<%= render partial: "product_book_growth_detail" %>
+<% when 8 %>
+	<%= render partial: "product_doll_detail" %>
 <% end %>
 
 

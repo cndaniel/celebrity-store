@@ -93,12 +93,22 @@ class OrdersController < ApplicationController
 
   def cancel
     @order.cancell_order!
-    @order.cart_items.each do |item|
-      if item.product
-        item.product.quantity += item.quantity
-        item.product.save
+
+    @order.product_lists.each do |list|
+      product = Product.find_by(id: list.product_id)
+      if product
+        product.quantity += list.quantity
+        product.save
       end
     end
+
+
+    # @order.cart_items.each do |item|
+    #   if item.product
+    #     item.product.quantity += item.quantity
+    #     item.product.save
+    #   end
+    # end
     redirect_to orders_path, notice: "成功取消订单"
   end
 

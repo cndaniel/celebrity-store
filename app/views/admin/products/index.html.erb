@@ -1,5 +1,5 @@
 
-<div class="container-fluid">
+
 
   <div class="row">
     <div class="col-md-10">
@@ -21,7 +21,7 @@
 
           <div class="caption text-left">
             <h5><%= link_to product.title, product_path(product) %></h5>
-            <p><%= simple_format(product.description) %></p>
+            <p><%= simple_format(product.description.first(12)) %></p>
             <%= link_to "编辑", edit_admin_product_path(product), class: "btn btn-sm btn-primary"%>
             <%= link_to "下架", "#", class: "btn btn-sm btn-warning" %>
             <%= link_to "删除", admin_product_path(product), method: :delete, class: "btn btn-sm btn-danger", data: { confirm: "确认删除产品？"}%>
@@ -37,13 +37,3 @@
     <%= link_to("发布新的产品", new_admin_product_path, class:"btn btn-primary pull-right btn-lg", style: "margin-top: 20px") %>
   </div>
   </div>
-
-
-
-
-
-</div>
-
-<br>
-<br>
-<br>

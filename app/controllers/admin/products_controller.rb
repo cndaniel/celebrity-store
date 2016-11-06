@@ -9,7 +9,7 @@ class Admin::ProductsController < ApplicationController
 		if params[:search]
 			@products = Product.search(params[:search]).order("created_at DESC")
 		else
-			@products = Product.all
+			@products = Product.first(8)
 		end
 
 		unless @products.any?

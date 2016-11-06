@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Xdore - 卖Xdite知识的Store</title>
+      <%= favicon_link_tag %>
+      <%= favicon_link_tag 'mb-icon.png', rel: 'apple-touch-icon', type: 'image/png'%>
+        <title>XDore - 分享 XDite 知识的 Store</title>
         <%= csrf_meta_tags %>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="description" content="Demo for flipping card creation, as part of the CSS transitions, transforms and animations series.">
+        <meta name="description" content="xdite，新生大学，全栈营，JDstore,软件学院，零基础编程">
 
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -19,12 +21,10 @@
 
     <body>
 
-        <div class="container-fluid">
 
             <%= render "common/navbar" %>
             <%= render "common/flashes" %>
             <%= yield %>
-        </div>
 
         <%= render "common/footer" %>
     </body>

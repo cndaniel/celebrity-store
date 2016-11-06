@@ -8,12 +8,12 @@
           <div class="card effect__hover">
 
             <div class="card__front">
-            	<%= render partial: "common/product_image", locals: {product: product, size: "thumb"} %>
+            	<%= render partial: "common/product_image", locals: {product: product, size: "medium"} %>
             </div>
 
             <div class="card__back">
               <% if product.photos.present? %>
-                <%= link_to image_tag(product.photos[0].url(:thumb), style:"width:100%"),product_path(product) %>
+                <%= link_to image_tag(product.photos[0].url(:medium), style:"width:100%"),product_path(product) %>
               <% else %>
                 <%= image_tag "//placehold.it/200x200", style:"width:100%;" %>
                 <% end %>
@@ -27,11 +27,14 @@
         <div class="section__content clearfix">
           <div class="row">
           	<div class="col-md-6 promo1">
-
-          	   <%= image_tag "https://ooo.0o0.ooo/2016/11/06/581f3e6386e2e.jpeg", class:"promo_image"%>
+              <a target="_blank" href= "http://fullstack.xinshengdaxue.com">
+          	   <%= image_tag "https://ooo.0o0.ooo/2016/11/06/581f72f9282f2.jpeg", class:"promo_image"%>
+             </a>
           	    </div>
           	    	<div class="col-md-6 promo2">
-                     <%=  image_tag "https://ooo.0o0.ooo/2016/11/06/581f3e92b5eee.jpeg",class:"promo_image" %>
+                    <%=link_to('/products/8') do %>
+                     <%= image_tag "https://ooo.0o0.ooo/2016/11/06/581f731ff1fc0.jpeg",class:"promo_image" %>
+                    <% end %>
                    </div>
 
         </div><!-- /card -->
