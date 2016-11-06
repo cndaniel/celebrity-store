@@ -17,7 +17,7 @@ create_address = DeliveryAddress.create([name: '大花', address: '北京市朝�
 # end
 
 Product.create!([title: "Ruby on Rails轻松入门", description: "用最短的時間，衝刺出最多的進度，立馬找到理想的工作", price: 5000, quantity: 10])
-Product.create!([title: "Growth Hack这样做",   description: "教你如何为自己的产品实现爆炸式增长", price: 5000, quantity: 50])
+Product.create!([title: "Growth Hack跟我做",   description: "教你如何为自己的产品实现爆炸式增长", price: 5000, quantity: 50])
 Product.create!([title: "Cognitive Learning", description: "元学习，元认知，关于如何学习学习再学习", price: 1200, quantity: 100])
 Product.create!([title: "BlockChain入门知识", description: "Xdite对区块链也有涉猎，如果你不知道这是什么，不如来听一下", price: 1000, quantity: 20])
 Product.create!([title: "敏捷开发与项目管理", description: "停止项目救火队的生活", price: 1000, quantity: 20])
