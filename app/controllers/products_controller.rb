@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+	layout "background", :only => :index
+
 	def index
 		# @products = Product.all
 		if params[:search]
