@@ -6,7 +6,7 @@
 		<%= link_to "所有订单", orders_path, class: "btn btn-primary pull-right btn-lg", style: "margin-bottom: 20px" %>
 	</div>
 	
-	<div class="row well">
+	<div class="row well" style="opacity:0.95;">
 		
 		<%= render partial: "common/order_table", locals: {delivery_address: delivery_address, order: @order} %>
 

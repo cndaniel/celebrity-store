@@ -10,17 +10,23 @@ CarrierWave.configure do |config|
       aws_access_key_id:     ENV["S3_key_id"],      # 你的 key
 
 
-      aws_secret_access_key: ENV["S3_key_secret"],      # 你的 secret key
+      aws_secret_access_key: ENV["aws_secret_access_key"],      # 你的 secret key
 
 
       region:                'eu-central-1' # 你的 S3 bucket 的 Region 位置
 
 
     }
+
     config.fog_directory  = "creativestore-bucket" # 你设定的 bucket name
 
 
 
+
+    config.fog_directory  = ENV["AWS_BUCKET_NAME"] # 你设定的 bucket name
+    config.storage :fog
+
+>>>>>>> a9b769e... updated
   else
    config.storage :file
   end

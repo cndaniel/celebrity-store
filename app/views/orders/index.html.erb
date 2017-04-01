@@ -1,10 +1,12 @@
-<div class="container">
+<div class="container" style="height: 100%;">
 
 	<% @orders.each do |order| %>
 
 	<% delivery_address = DeliveryAddress.find(order.delivery_address_id ) %>
 
-	<div class="row well">
+	<div class="row well" style="opacity:0.95;">
+
+		<%= order.created_at.strftime("%Y年%m月%d日 %H:%M") %>
 
 		<%= link_to "查看详情", order_path(order.token), method: :get, class: "btn btn-default pull-right" %>
 		
